@@ -40,7 +40,7 @@ public class MetalDetectorItem extends Item {
         }
 
         context.getStack().damage(1, context.getPlayer(),
-                playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
+                playerEntity -> playerEntity.sendToolBreakStatus(context.getHand()));
 
         return ActionResult.SUCCESS;
     }
